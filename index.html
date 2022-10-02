@@ -39,16 +39,15 @@
             </div>
             <div>
                 <label for="name">ФИО владельца</label>
-                <input type="text" id="name" required />*
+                <input type="text" id="name" required>*
             </div>
             <div>
                 <label for="number">Введите телефон в формате +7-911-123-45-67:</label>
-                <input type="tel" id="number" required pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}"
-                    minlength="10" maxlength="20" />*
+                <input type="tel" id="number" minlength="10" maxlength="20" />*
             </div>
             <div>
                 <label for="poroda">Порода</label>
-                <select name="Порода" id="poroda">
+                <select name="Порода" id="breed">
                     <option value="Метис">Метис</option>
                     <option value="Абиссинская">Абиссинская</option>
                     <option value="Бенгальская">Бенгальская</option>
@@ -62,9 +61,9 @@
             </div>
             <div>
                 <p>Чем питается:</p>
-                <input type="checkbox" name="korm" value="1" />Сухой корм<br />
-                <input type="checkbox" name="korm" value="2" />Влажный корм<br />
-                <input type="checkbox" name="korm" value="3" />Натуральный корм<br />
+                <input type="checkbox" name="korm" value="Сухой корм" class="food" />Сухой корм<br />
+                <input type="checkbox" name="korm" value="Влажный корм" class="food" />Влажный корм<br />
+                <input type="checkbox" name="korm" value="Натуральный корм" class="food" />Натуральный корм<br />
             </div>
             <div>
                 <p>Пол:</p>
@@ -87,11 +86,12 @@
                 <p>Прикрепить фото питомца <input type="file" /></p>
             </div>
             <div>
-                <input type="submit" value="Сохранить">
+                <button id="ok">Сохранить</button>
             </div>
         </form>
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
